@@ -2,7 +2,7 @@
 
 #### Installing (Установка):
 ```sh
-pip install -U https://github.com/krilifon/qittle/archive/master.zip
+pip install -U https://github.com/vladislavkovalskyi/aioowm/archive/master.zip
 ```
 
 #### Links (Ссылки):
