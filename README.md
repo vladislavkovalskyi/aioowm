@@ -2,9 +2,7 @@
 
 ### Installing (Установка):
 ```sh
-git clone https://GitHubUSERNAME:GitHubPASSWORD@github.com/vladislavkovalskyi/aioowm
-cd aioowm
-pip install .
+pip install -U https://github.com/krilifon/qittle/archive/master.zip
 ```
 
 ### Official Chat (Официальный чат):
