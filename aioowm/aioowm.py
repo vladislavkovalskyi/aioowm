@@ -2,7 +2,8 @@ from typing import Optional
 
 import aiohttp
 
-from aioowm.other.const import const
+from aioowm.const import const
+from aioowm.types.models import Model
 
 
 class OWM:
@@ -12,17 +13,19 @@ class OWM:
 		:param language: accepts country identifier (en, ru, fr)
 		"""
 		self.__token = token
-		self.__language = language
+		self.language = language
 
-	async def get(self, city: Optional[str]):
-		self.city = city
+	@staticmethod
+	async def get(response: Model):
+		return response
 
+	async def weather(self, city: Optional[str]):
 		async with aiohttp.ClientSession() as session:
 			async with session.get(
 					const.request_link.format(
-							city=self.city,
-							language=self.__language,
+							city=city,
+							language=self.language,
 							token=self.__token
 					)
 			) as response:
-				return await response.json(encoding='UTF-8')
+				return await self.get(response)
