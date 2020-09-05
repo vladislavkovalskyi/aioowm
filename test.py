@@ -6,7 +6,9 @@ weather = OWM('85163474e6db3515b4fc39c3439c7220', 'ru')
 
 
 async def run():
-	result = await weather.weather('Одесса')
+	result = await weather.weather('Moscow')
+
 	print(result)
+
 
 asyncio.run(run())
