@@ -1,7 +1,5 @@
 from typing import Optional
 
-import aiohttp
-
 from aioowm.const import const
 from aioowm.http.http import request
 from aioowm.types.models import Model
@@ -13,14 +11,16 @@ class OWM:
 		:param token: your api-key https://home.openweathermap.org/api_keys
 		:param language: accepts country identifier (en, ru, fr)
 		"""
-		self.__token = token
+		self._token = token
 		self.language = language
 
 	async def get(self, city: Optional[str]) -> Model:
-		response = await request(const.request_link.format(
-							city=city,
-							language=self.language,
-							token=self.__token)
+		response = await request(
+				const.weather_api, {
+					'q':     city,
+					'lang':  self.language,
+					'appid': self._token
+				}
 		)
 
 		return Model(**response)
