@@ -14,5 +14,6 @@ setuptools.setup(
     ],
     install_requires=[
         "aiohttp~=3.6.2",
+        "pydantic~=1.6.1"
     ]
 )
