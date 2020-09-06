@@ -6,7 +6,7 @@ from aioowm.types.models import Model
 
 
 class OWM:
-	def __init__(self, token: Optional[str], language: Optional[str]):
+	def __init__(self, token: str, language: Optional[str]):
 		"""
 		:param token: your api-key https://home.openweathermap.org/api_keys
 		:param language: accepts country identifier (en, ru, fr)
@@ -14,7 +14,7 @@ class OWM:
 		self._token = token
 		self.language = language
 
-	async def get(self, city: Optional[str]) -> Model:
+	async def get(self, city: str) -> Model:
 		response = await request(
 				const.weather_api, {
 					'q':     city,
