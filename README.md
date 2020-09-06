@@ -19,11 +19,13 @@ import asyncio
 
 weather = OWM(token='Token Here', language='ru')
 # https://home.openweathermap.org/api_keys
-# (en) language - the language in which the data will come
-# (ru) language - язык, на котором будут приходить данные
+# language accepts country identifier (en, ru, fr)
 
 async def app():
     result = await weather.get(city='Moscow')
+    print(result.name)  # City name
+    print(result.coord.lat, result.coord.lon)  # Coords of your city
+
     print(result)
 
 asyncio.run(app())
