@@ -25,8 +25,7 @@ async def app():
     result = await weather.get(city='Moscow')
     print(result.name)  # City name
     print(result.coord.lat, result.coord.lon)  # Coords of your city
-
-    print(result)
+    print(result.weather[0].description)  # Weather description
 
 asyncio.run(app())
 ```
