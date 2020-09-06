@@ -54,4 +54,4 @@ class Model(BaseModel):
 	id: int = None
 	name: str = None
 	cod: int = None
-
+	message: str = None
