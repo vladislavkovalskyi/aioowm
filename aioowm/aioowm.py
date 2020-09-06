@@ -22,5 +22,4 @@ class OWM:
 					'appid': self._token
 				}
 		)
-
 		return Model(**response)

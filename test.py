@@ -1,14 +1,10 @@
-import asyncio
-
 from aioowm import OWM
+from asyncio import run
 
-weather = OWM('85163474e6db3515b4fc39c3439c7220', 'ru')
 
-
-async def run():
-	result = await weather.get('Moscow')
-
+async def app():
+	weather = OWM('85163474e6db3515b4fc39c3439c7220', 'ru')
+	result = await weather.get('Your City')
 	print(result)
 
-
-asyncio.run(run())
+run(app())

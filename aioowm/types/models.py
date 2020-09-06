@@ -43,7 +43,7 @@ class SysModel(BaseModel):
 
 class Model(BaseModel):
 	coord: CoordModel = None
-	weather: List[WeatherModel]
+	weather: List[WeatherModel] = None
 	base: str = None
 	main: MainModel = None
 	visibility: int = None
