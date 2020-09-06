@@ -2,6 +2,7 @@ from pydantic import BaseModel  # ver 1 6 1
 
 from typing import List
 
+
 class CoordModel(BaseModel):
 	lon: float = None
 	lat: float = None
