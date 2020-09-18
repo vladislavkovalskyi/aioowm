@@ -1,4 +1,4 @@
-from pydantic import BaseModel  # ver 1 6 1
+from pydantic import BaseModel
 
 from typing import List
 
