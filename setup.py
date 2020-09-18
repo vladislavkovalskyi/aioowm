@@ -18,6 +18,7 @@ setuptools.setup(
 		author=locals()["__author__"],
 		description="Async OpenWeatherMap API!",
 		long_description=long_description,
+		long_description_content_type="text/markdown",
 		license="MIT",
 		url="https://github.com/vladislavkovalskyi/aioowm",
 		packages=setuptools.find_packages(),
