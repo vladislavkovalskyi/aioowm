@@ -23,7 +23,7 @@ async def temperature(temperature: str):
 	"""
 	identifiers = {"celsius": "metric", "fahrenheit": "imperial", "kelvin": "kelvin"}
 
-	if temperature not in identifiers:
+	if temperature.lower() not in identifiers:
 		raise TypeError("Unknown temperature identifier!")
 	else:
 		return identifiers[temperature]
