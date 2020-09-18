@@ -1,10 +1,13 @@
-from aioowm import OWM
 from asyncio import run
+
+from aioowm import OWM
+
+weather = OWM(token="Your token here",
+              language="ru")
 
 
 async def app():
-	weather = OWM('85163474e6db3515b4fc39c3439c7220', 'ru')
-	result = await weather.get('Your City')
+	result = await weather.get("Moscow")
 	print(result)
 
 run(app())
