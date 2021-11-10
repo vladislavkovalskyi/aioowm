@@ -15,7 +15,7 @@ pip install -U https://github.com/vladislavkovalskyi/aioowm/archive/master.zip
 ><a href="https://vk.me/join/AJQ1d5U7ihh63fJPq9y_NWDO">
 >    <img src="https://img.shields.io/static/v1?message=VK%20chat&label=&color=orange">
 ></a>
-><a href="">
+><a href="https://github.com/vladislavkovalskyi/aioowm/blob/master/docs/docs.md">
 >    <img src="https://img.shields.io/static/v1?message=Documentation&label=&color=blue">
 ></a>
 
