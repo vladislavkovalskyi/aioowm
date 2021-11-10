@@ -1,2 +1,2 @@
 from .aioowm import OWM
-from aioowm.types import models
+from aioowm.types import model
