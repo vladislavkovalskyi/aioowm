@@ -27,8 +27,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     author_email="v.darknesssb@gmail.com",
     classifiers=[
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Operating System :: OS Independent",
     ],
     install_requires=["aiohttp", "pydantic"]
