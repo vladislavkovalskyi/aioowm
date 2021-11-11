@@ -1,3 +1,16 @@
+###Перед использованием примеров не забывайте про иницализацию класса OWM.
+```python
+import asyncio
+
+from aioowm import OWM
+
+weather = OWM("token", "ru")
+
+# Запуск
+loop = asyncio.get_event_loop()
+loop.run_until_complete(app())
+```
+
 ### Пример работы с error:
 
 ```python
